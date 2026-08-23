@@ -1,0 +1,113 @@
+Genren.Software 
+
+jshell
+
+gits 
+
+
+comandos: 
+
+Git init - inicializar o GIT Se você quer iniciar o controle do Git diretamente nessa pasta atual, rode o comando para inicializar o repositório local:
+Git nano - modifica o aquivo texto
+Git Status - mostra os dados dentro do diretorio 
+Git Add - adiciona arquivo para area de transferencia
+Git Commit -m " " - transfere 
+Git Log
+Git Clone
+Git Push - Tras o remoto e tras o merge. Mescla arv velho com novo ;compartilhar com quem ? 
+Git Pull
+Git Remote -v 
+
+
+
+passo a passo 
+
+
+1. mexo no class
+
+2. add
+
+3. commit
+
+4. status
+
+alterando o conteudo do git remoto, copiando para o git local, fazendo mudanças e devolvendo att. 
+-----------
+
+
+exercicios
+
+1.import java.util.ArrayList;
+
+public class Gits {
+
+    // a. Método que retorna quantas ocorrências de um elemento estão na lista
+    public static int nOcorrencias(ArrayList<Integer> l, Integer el) {
+        int cont = 0;
+        for (int i = 0; i < l.size(); i++) {
+            if (l.get(i).equals(el)) {
+                cont++;
+            }
+        }
+        return cont;
+    }
+
+    // b. Método que retorna true se l tem elementos repetidos
+    public static boolean hasRepeat(ArrayList<Integer> l) {
+        for (int i = 0; i < l.size(); i++) {
+            for (int j = i + 1; j < l.size(); j++) {
+                if (l.get(i).equals(l.get(j))) {
+                    return true; // Achou pelo menos um repetido, já retorna true
+                }
+            }
+        }
+        return false; // Percorreu tudo e não achou nenhum repetido
+    }
+
+    // c. Método que retorna o número de elementos repetidos em l
+    public static int nroRepeat(ArrayList<Integer> l) {
+        return listRepeat(l).size(); // Reaproveita o método da letra D!
+    }
+
+    // d. Método que retorna uma lista de elementos repetidos de l
+    public static ArrayList<Integer> listRepeat(ArrayList<Integer> l) {
+        ArrayList<Integer> repetidos = new ArrayList<>();
+        for (int i = 0; i < l.size(); i++) {
+            Integer elemento = l.get(i);
+            // Se aparece mais de 1 vez na lista e ainda não adicionamos na lista de repetidos
+            if (nOcorrencias(l, elemento) > 1 && !repetidos.contains(elemento)) {
+                repetidos.add(elemento);
+            }
+        }
+        return repetidos;
+    }
+
+    // e. Método que retorna a união de l1 e l2 (sem duplicados)
+    public static ArrayList<Integer> union(ArrayList<Integer> l1, ArrayList<Integer> l2) {
+        ArrayList<Integer> resultado = new ArrayList<>(l1); // Copia l1
+        for (Integer elemento : l2) {
+            if (!resultado.contains(elemento)) {
+                resultado.add(elemento);
+            }
+        }
+        return resultado;
+    }
+
+    // f. Método que retorna a intersecção de l1 e l2
+    public static ArrayList<Integer> intersect(ArrayList<Integer> l1, ArrayList<Integer> l2) {
+        ArrayList<Integer> resultado = new ArrayList<>();
+        for (Integer elemento : l1) {
+            if (l2.contains(elemento) && !resultado.contains(elemento)) {
+                resultado.add(elemento);
+            }
+        }
+        return resultado;
+    }
+}
+
+--------------------------------------------
+
+git branch 
+git checkout nova_branch 
+git branch --all ?
+git merge ..

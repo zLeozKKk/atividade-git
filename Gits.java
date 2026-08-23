@@ -16,15 +16,6 @@ public class Gits {
         }
         return cont; 
     }
-
-    public boolean hasRepeat() {
-        for (int i = 0; i < this.l.size(); i++) {
-            for (int j = i + 1; j < this.l.size(); j++) {
-                if (this.l.get(i).equals(this.l.get(j))) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
+    
+    
 }
