@@ -51,6 +51,30 @@ public class Gits {
         return repetidos;
     }
 
+    // adc metodos pelo proprio GITHUB
+
+    // e. União
+    public ArrayList<Integer> union(ArrayList<Integer> l2) {
+        ArrayList<Integer> resultado = new ArrayList<>();
+
+        if (this.l != null) {
+            for (Integer item : this.l) {
+                if (!resultado.contains(item)) {
+                    resultado.add(item);
+                }
+            }
+        }
+
+        if (l2 != null) {
+            for (Integer item : l2) {
+                if (!resultado.contains(item)) {
+                    resultado.add(item);
+                }
+            }
+        }
+
+        return resultado;
+    }
 
   
 }
