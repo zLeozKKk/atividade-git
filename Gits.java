@@ -32,7 +32,7 @@ public class Gits {
         }
         return false;
     }
-
+// forçando erro. 
     public int nroRepeat() {
         return listRepeat().size();
     }
