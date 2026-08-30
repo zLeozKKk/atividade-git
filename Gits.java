@@ -33,6 +33,24 @@ public class Gits {
         return false;
     }
 
+    public int nroRepeat() {
+        return listRepeat().size();
+    }
+
+    // d. Retorna uma lista com os elementos repetidos
+    public ArrayList<Integer> listRepeat() {
+        ArrayList<Integer> repetidos = new ArrayList<>();
+        if (this.l == null) return repetidos;
+
+        for (int i = 0; i < this.l.size(); i++) {
+            Integer atual = this.l.get(i);
+            if (nOcorrencias(atual) > 1 && !repetidos.contains(atual)) {
+                repetidos.add(atual);
+            }
+        }
+        return repetidos;
+    }
+
 
   
 }
