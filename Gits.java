@@ -79,5 +79,20 @@ public class Gits {
         return resultado;
     }
 
+    // f. Retorna a intersecção da lista interna (this.l) com outra lista (l2)
+    public ArrayList<Integer> intersect(ArrayList<Integer> l2) {
+        ArrayList<Integer> resultado = new ArrayList<>();
+
+        if (this.l == null || l2 == null) return resultado;
+
+        for (Integer item : this.l) {
+            if (l2.contains(item) && !resultado.contains(item)) {
+                resultado.add(item);
+            }
+        }
+
+        return resultado;
+    }
+
   
 }
