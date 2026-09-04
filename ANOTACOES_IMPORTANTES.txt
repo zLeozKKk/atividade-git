@@ -33,3 +33,30 @@ git merge feature/nome
 ENVIAR A.
 git push origin master
 
+---
+
+# Checagem de Estado
+git status
+git branch
+
+# Fluxo de Feature Branch
+git checkout -b feature/nome-da-tarefa
+git add .
+git commit -m "Descricao das alteracoes"
+git push -u origin feature/nome-da-tarefa
+
+# Fusao na Trunk (Master)
+git checkout master
+git merge feature/nome-da-tarefa
+git push origin master
+
+# Resolucao de Conflitos
+git checkout --ours NOME_DO_ARQUIVO
+# ou ajuste manual via marcas de conflito no VS Code
+
+---
+
+COMO MELHORAR? PRÁTICA
+
+Powershell : criar as pastas, com arquivos pais. Rodar o git.
+Vscode : Criação de codigo
