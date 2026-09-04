@@ -1,0 +1,35 @@
+Master/main : Onde o código final fica, é a principal BRANCH
+
+Origin : nome genérico que o Git usa para apelidar o repositorio que está no GitHub.
+
+BRANCH TEMPORÁRIA: feature/nome, branch de testes, para não estragar a principal. 
+
+-----
+
+PREPARANDO ARQ NO POWERSHELL
+
+ENTRANDO NA PASTA
+cd C:\Users\leomd\OneDrive\Documentos\Geren
+
+CRIANDO ESTRUTURA
+New-Item -ItemType Directory -Path "src/colecionaveis", "test/colecionaveis" -Force
+New-Item -ItemType File -Path ".gitignore", "README.md" -Force
+Set-Content .gitignore "*.class`nbin/`n.settings/`n.classpath`n.project"
+
+INICIANDO O GIT E CONEXÃO COM GITHUB
+git init
+git remote add origin https://github.com/zLeozKKk/Teste_Git.git
+
+----
+
+REPETIÇÃO DIÁRIA
+
+BRANCH temporária , edição commit e envio no github
+
+unir as duas BRANCH MERGE
+git checkout master
+git merge feature/nome
+
+ENVIAR A.
+git push origin master
+
