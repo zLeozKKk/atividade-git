@@ -54,6 +54,8 @@ git push origin master
 git checkout --ours NOME_DO_ARQUIVO
 # ou ajuste manual via marcas de conflito no VS Code
 
+# Historico
+git log : historico geral com autores 
 ---
 
 COMO MELHORAR? PRÁTICA
